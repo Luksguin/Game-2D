@@ -472,6 +472,7 @@ MonoBehaviour:
   myRigdbody: {fileID: 565143129}
   friction: {x: -0.1, y: 0}
   speed: 5
+  speedRun: 8
   forceJump: 16
 --- !u!1 &826699132
 GameObject:
@@ -659,8 +660,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484283532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: -3.9715, z: -5.4}
-  m_LocalScale: {x: 42.363373, y: 3.6964757, z: 1}
+  m_LocalPosition: {x: 35.7, y: -4.9111, z: -5.4}
+  m_LocalScale: {x: 42.363373, y: 3.318696, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -768,7 +769,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998356962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.5, y: -4.6357, z: -5.4}
+  m_LocalPosition: {x: -31.7, y: -5.2, z: -5.4}
   m_LocalScale: {x: 42.363373, y: 2.196169, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

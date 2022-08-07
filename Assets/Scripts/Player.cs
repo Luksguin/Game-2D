@@ -8,7 +8,12 @@ public class Player : MonoBehaviour
 
     public Vector2 friction = new Vector2(.1f, 0);
     public float speed;
+    public float speedRun;
     public float forceJump;
+
+    private float _currentSpeed;
+
+    private bool _isJumpping = false;
 
     void Update()
     {
@@ -18,13 +23,22 @@ public class Player : MonoBehaviour
 
     public void Moviments()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            _currentSpeed = speedRun;
+        }
+        else
+        {
+            _currentSpeed = speed;
+        }
+
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            myRigdbody.velocity = new Vector2(+speed, myRigdbody.velocity.y);
+            myRigdbody.velocity = new Vector2(+_currentSpeed, myRigdbody.velocity.y);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            myRigdbody.velocity = new Vector2(-speed, myRigdbody.velocity.y);
+            myRigdbody.velocity = new Vector2(-_currentSpeed, myRigdbody.velocity.y);
         }
 
         if(myRigdbody.velocity.x > 0)
@@ -39,9 +53,14 @@ public class Player : MonoBehaviour
 
     public void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(_isJumpping == false)
         {
-            myRigdbody.velocity = Vector2.up * forceJump;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                myRigdbody.velocity = Vector2.up * forceJump;
+                _isJumpping = true;
+            }
+
         }
     }
 }
