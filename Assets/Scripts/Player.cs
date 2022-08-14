@@ -46,13 +46,13 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             myRigdbody.velocity = new Vector2(+_currentSpeed, myRigdbody.velocity.y);
-            myRigdbody.transform.localScale = new Vector3(1, 1, 1);
+            //myRigdbody.transform.localScale = new Vector3(1, 1, 1);
             animator.SetBool(boolRun, true);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             myRigdbody.velocity = new Vector2(-_currentSpeed, myRigdbody.velocity.y);
-            myRigdbody.transform.localScale = new Vector3(-1, 1, 1);
+            //myRigdbody.transform.localScale = new Vector3(-1, 1, 1);
             animator.SetBool(boolRun, true);
         }
         else
