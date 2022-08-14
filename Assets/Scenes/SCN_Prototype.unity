@@ -774,7 +774,7 @@ MonoBehaviour:
   startLife: 10
   animator: {fileID: 9259449}
   boolDeath: Death
-  deathTime: 1
+  deathTime: 0.9
 --- !u!1 &632739837
 GameObject:
   m_ObjectHideFlags: 0

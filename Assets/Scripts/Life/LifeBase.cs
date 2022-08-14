@@ -42,8 +42,6 @@ public class LifeBase : MonoBehaviour
 
         animator.SetBool(boolDeath, true);
 
-        new WaitForSecondsRealtime(deathTime);
-
-        Destroy(gameObject);
+        Destroy(gameObject, deathTime);
     }
 }
