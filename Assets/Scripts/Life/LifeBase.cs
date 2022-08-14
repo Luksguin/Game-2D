@@ -8,7 +8,11 @@ public class LifeBase : MonoBehaviour
     private int _currentLife;
 
     private bool _isDead = false;
-    public bool destroyOnKill = false;
+
+    [Header("Animation Death")]
+    public Animator animator;
+    public string boolDeath;
+    public float deathTime;
 
     private void Awake()
     {
@@ -36,9 +40,10 @@ public class LifeBase : MonoBehaviour
     {
         _isDead = true;
 
-        if(destroyOnKill)
-        {
-            Destroy(gameObject);
-        }
+        animator.SetBool(boolDeath, true);
+
+        new WaitForSecondsRealtime(deathTime);
+
+        Destroy(gameObject);
     }
 }
