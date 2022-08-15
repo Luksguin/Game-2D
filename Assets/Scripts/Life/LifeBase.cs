@@ -9,6 +9,8 @@ public class LifeBase : MonoBehaviour
 
     private bool _isDead = false;
 
+    public FlashPlayer flashPlayer;
+
     [Header("Animation Death")]
     public Animator animator;
     public string boolDeath;
@@ -17,6 +19,10 @@ public class LifeBase : MonoBehaviour
     private void Awake()
     {
         Init();
+        if(flashPlayer == null)
+        {
+            flashPlayer = GetComponent<FlashPlayer>();
+        }
     }
 
     private void Init()
@@ -33,6 +39,11 @@ public class LifeBase : MonoBehaviour
         if(_currentLife <= 0)
         {
             Kill();
+        }
+
+        if(flashPlayer != null)
+        {
+            flashPlayer.Flash();
         }
     }
 
