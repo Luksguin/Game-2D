@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
 {
+    public LifeBase lifeBase;
+
     public Animator animator;
     public string triggerAttack;
     public int damage;
@@ -22,5 +24,10 @@ public class EnemyBase : MonoBehaviour
     public void Attack()
     {
         animator.SetTrigger(triggerAttack);
+    }
+
+    public void Damage(int amount)
+    {
+        lifeBase.Damage(amount);
     }
 }
