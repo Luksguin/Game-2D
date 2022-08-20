@@ -321,7 +321,10 @@ GameObject:
   - component: {fileID: 8073972946613542793}
   - component: {fileID: 2403329696302037006}
   - component: {fileID: 3733887675761654679}
+  - component: {fileID: 3810000070146016229}
   - component: {fileID: 4483420648904792363}
+  - component: {fileID: 6297168819674036402}
+  - component: {fileID: 1712803952765905966}
   m_Layer: 0
   m_Name: PFB_Enemy_1
   m_TagString: Untagged
@@ -397,6 +400,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.1163273, y: 5.1352143}
   m_EdgeRadius: 0
+--- !u!50 &3810000070146016229
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090786764695304946}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &4483420648904792363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,7 +433,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea37cdca9a533e40be3624d13203793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeBase: {fileID: 0}
+  animator: {fileID: 2403329696302037006}
+  triggerAttack: Attack
   damage: 10
+--- !u!114 &6297168819674036402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090786764695304946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446ee2ea414508141ab7d1763a3ba2d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLife: 3
+  flashPlayer: {fileID: 0}
+  animator: {fileID: 2403329696302037006}
+  boolDeath: Death
+  deathTime: 1.5
+--- !u!114 &1712803952765905966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090786764695304946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bef164d3c4573848aabebe9656cb825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesRenderers:
+  - {fileID: 3294411287784764205}
+  - {fileID: 4058282757918593861}
+  - {fileID: 2944600070154927280}
+  - {fileID: 8622257899716607877}
+  - {fileID: 4402658883949824882}
+  - {fileID: 3096084783782573798}
+  color: {r: 0.21248412, g: 1, b: 0, a: 0}
+  duration: 0.1
 --- !u!1 &3840710139504160895
 GameObject:
   m_ObjectHideFlags: 0
