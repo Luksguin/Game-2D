@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2944973745361044811, guid: e0d57717ad485d748986ddb9eba2beb8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: -8.62
       objectReference: {fileID: 0}
     - target: {fileID: 2944973745361044811, guid: e0d57717ad485d748986ddb9eba2beb8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -612,7 +612,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253813305}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.561242, y: -2.3541176, z: 0.1}
+  m_LocalPosition: {x: -13.23, y: 3.62, z: 0.1}
   m_LocalScale: {x: 1, y: 5.574226, z: 1}
   m_Children: []
   m_Father: {fileID: 2111543833}
@@ -1743,7 +1743,6 @@ GameObject:
   m_Component:
   - component: {fileID: 565143132}
   - component: {fileID: 565143134}
-  - component: {fileID: 565143135}
   - component: {fileID: 565143129}
   - component: {fileID: 565143131}
   m_Layer: 0
@@ -1815,44 +1814,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startLife: 10
-  flashPlayer: {fileID: 565143135}
+  flashPlayer: {fileID: 2134578769}
   animator: {fileID: 9259449}
   boolDeath: Death
   deathTime: 2.5
---- !u!114 &565143135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565143128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bef164d3c4573848aabebe9656cb825, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spritesRenderers:
-  - {fileID: 1089003203}
-  - {fileID: 1985510158}
-  - {fileID: 230602249}
-  - {fileID: 867632291}
-  - {fileID: 1205722339}
-  - {fileID: 560263609}
-  - {fileID: 766241301}
-  - {fileID: 2025692860}
-  - {fileID: 1152301225}
-  - {fileID: 1576176760}
-  - {fileID: 1429207903}
-  - {fileID: 681873357}
-  - {fileID: 2100773242}
-  - {fileID: 1781115242}
-  - {fileID: 829702240}
-  - {fileID: 525380434}
-  - {fileID: 1211414174}
-  - {fileID: 1751707123}
-  - {fileID: 1160061069}
-  color: {r: 1, g: 0, b: 0, a: 1}
-  duration: 0.2
 --- !u!1 &573759077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,7 +2523,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: x10
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3327,7 +3292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b32821a519ef7429eab4749cf23b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 0
+  coinAmount: {fileID: 776483426}
+  currentCoins: 0
 --- !u!4 &1142388407
 Transform:
   m_ObjectHideFlags: 0
@@ -5396,6 +5362,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 565143132}
     m_Modifications:
+    - target: {fileID: 22457432071630300, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1517437512253707351, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
       propertyPath: m_Material
       value: 
@@ -5749,13 +5719,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: PFB_Enemy_1
       objectReference: {fileID: 0}
+    - target: {fileID: 3733887675761654679, guid: 3de838754c767a446a5473969062a84e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3810000070146016229, guid: 3de838754c767a446a5473969062a84e, type: 3}
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4483420648904792363, guid: 3de838754c767a446a5473969062a84e, type: 3}
       propertyPath: damage
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4483420648904792363, guid: 3de838754c767a446a5473969062a84e, type: 3}
       propertyPath: animator
@@ -6077,6 +6051,62 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2134578767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8835229685202505509, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
+  m_PrefabInstance: {fileID: 2013052702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2134578769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134578767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bef164d3c4573848aabebe9656cb825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesRenderers:
+  - {fileID: 1089003203}
+  - {fileID: 1985510158}
+  - {fileID: 230602249}
+  - {fileID: 867632291}
+  - {fileID: 1205722339}
+  - {fileID: 560263609}
+  - {fileID: 766241301}
+  - {fileID: 2025692860}
+  - {fileID: 1152301225}
+  - {fileID: 1576176760}
+  - {fileID: 1429207903}
+  - {fileID: 681873357}
+  - {fileID: 2100773242}
+  - {fileID: 1781115242}
+  - {fileID: 829702240}
+  - {fileID: 525380434}
+  - {fileID: 1211414174}
+  - {fileID: 1751707123}
+  - {fileID: 1160061069}
+  color: {r: 1, g: 0, b: 0, a: 1}
+  duration: 0.15
+--- !u!114 &2134578770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134578767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446ee2ea414508141ab7d1763a3ba2d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLife: 10
+  flashPlayer: {fileID: 2134578769}
+  animator: {fileID: 9259449}
+  boolDeath: Death
+  deathTime: 2.5
 --- !u!1001 &3868252670095591803
 PrefabInstance:
   m_ObjectHideFlags: 0
