@@ -2,22 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Ebac.Core.Singleton;
 
-public class CollectableManager : MonoBehaviour
+public class CollectableManager : Singleton<CollectableManager>
 {
     public static CollectableManager Instance;
 
+    public SOInt currentCoins;
     public TextMeshProUGUI coinAmount;
-
-    public int currentCoins;
-
-    private void Awake()
-    {
-        if(Instance == null)
-           Instance = this;
-        else
-           Destroy(gameObject);
-    }
 
     private void Start()
     {
@@ -26,12 +18,12 @@ public class CollectableManager : MonoBehaviour
 
     private void Reset()
     {
-        currentCoins = 0;
+        currentCoins.value = 0;
     }
 
     public void AddCoins(int amount = 1)
     {
-        coinAmount.text = currentCoins.ToString();
-        currentCoins += amount;
+        coinAmount.text = currentCoins.value.ToString();
+        currentCoins.value += amount;
     }
 }
