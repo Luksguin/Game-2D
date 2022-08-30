@@ -32,8 +32,8 @@ public class GameManager : Singleton<GameManager>
 
     private void SpawnPlayer()
     {
-        _currentPlayer = Instantiate(player);
-        _currentPlayer.transform.position = startPoint.transform.position;
-        _currentPlayer.transform.DOScale(0, duration).SetEase(ease).SetDelay(delay).From();
+       // _currentPlayer = Instantiate(player);
+        player.transform.position = startPoint.transform.position;
+        player.transform.DOScale(0, duration).SetEase(ease).SetDelay(delay).From();
     }
 }
