@@ -5,11 +5,11 @@ using TMPro;
 
 public class SOUiUpdate : MonoBehaviour
 {
-    public SOInt soInt;
+    public SOInt soIntCoin;
     public TextMeshProUGUI uiText;
 
     void Update()
     {
-        uiText.text = soInt.value.ToString();
+        uiText.text = soIntCoin.value.ToString();
     }
 }

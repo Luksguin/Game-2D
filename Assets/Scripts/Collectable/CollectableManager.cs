@@ -7,6 +7,7 @@ using Ebac.Core.Singleton;
 public class CollectableManager : Singleton<CollectableManager>
 {
     public SOInt currentCoins;
+    public SOInt specialCoins;
     public TextMeshProUGUI coinAmount;
 
     private void Start()
