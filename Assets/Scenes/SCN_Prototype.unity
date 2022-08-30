@@ -629,10 +629,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea37cdca9a533e40be3624d13203793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soEnemySetup: {fileID: 0}
   lifeBase: {fileID: 0}
   animator: {fileID: 0}
-  triggerAttack: 
-  damage: 10
 --- !u!1 &271973507
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,7 +5081,7 @@ RectTransform:
   - {fileID: 551305245}
   - {fileID: 957486270}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5664,6 +5663,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 137922731}
     - target: {fileID: 4483420648904792363, guid: 3de838754c767a446a5473969062a84e, type: 3}
+      propertyPath: soEnemySetup
+      value: 
+      objectReference: {fileID: 11400000, guid: aab0d87919129bd4098a2596dbbe32a9, type: 2}
+    - target: {fileID: 4483420648904792363, guid: 3de838754c767a446a5473969062a84e, type: 3}
       propertyPath: triggerAttack
       value: Attack
       objectReference: {fileID: 0}
@@ -5870,7 +5873,7 @@ Transform:
   - {fileID: 2063969402}
   - {fileID: 27885223}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!210 &2111543834
 SortingGroup:

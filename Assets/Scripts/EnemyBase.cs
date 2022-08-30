@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
 {
+    public SOEnemySetup soEnemySetup;
     public LifeBase lifeBase;
 
     public Animator animator;
-    public string triggerAttack;
-    public int damage;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -16,14 +15,14 @@ public class EnemyBase : MonoBehaviour
 
         if(life != null)
         {
-            life.Damage(damage);
+            life.Damage(soEnemySetup.damage);
             Attack();
         }
     }
 
     public void Attack()
     {
-        animator.SetTrigger(triggerAttack);
+        animator.SetTrigger(soEnemySetup.triggerAttack);
     }
 
     public void Damage(int amount)
