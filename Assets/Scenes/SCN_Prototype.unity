@@ -1761,9 +1761,9 @@ MonoBehaviour:
   speed: 10
   speedRun: 15
   forceJump: 16
-  jumpScaleY: 1.3
-  jumpScaleX: 0.7
-  animationDuration: 0.15
+  soJumpScaleY: {fileID: 11400000, guid: 37e5ae69c81cd4b4597abfd9548b4c37, type: 2}
+  soJumpScaleX: {fileID: 11400000, guid: e240654e59a76db4693b748d49ab7b83, type: 2}
+  soAnimationDuration: {fileID: 11400000, guid: 54382c319325541488cb4e921276eec3, type: 2}
   animator: {fileID: 9259449}
   boolRun: Run
   boolJump: Jump

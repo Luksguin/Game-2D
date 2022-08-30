@@ -13,9 +13,12 @@ public class Player : MonoBehaviour
     public float forceJump;
 
     [Header("Animations")]
-    public float jumpScaleY;
+    /*public float jumpScaleY;
     public float jumpScaleX;
-    public float animationDuration;
+    public float animationDuration;*/
+    public SOFloat soJumpScaleY;
+    public SOFloat soJumpScaleX;
+    public SOFloat soAnimationDuration;
 
     [Header("Animations States")]
     public Animator animator;
@@ -91,7 +94,7 @@ public class Player : MonoBehaviour
 
     public void jumpScale()
     {
-        myRigdbody.transform.DOScaleY(jumpScaleY, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
-        myRigdbody.transform.DOScaleX(jumpScaleX, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
+        myRigdbody.transform.DOScaleY(soJumpScaleY.value, soAnimationDuration.value).SetLoops(2, LoopType.Yoyo).SetEase(ease);
+        myRigdbody.transform.DOScaleX(soJumpScaleX.value, soAnimationDuration.value).SetLoops(2, LoopType.Yoyo).SetEase(ease);
     }
 }
