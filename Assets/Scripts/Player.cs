@@ -5,29 +5,13 @@ using DG.Tweening;
 
 public class Player : MonoBehaviour
 {
-    [Header("Speed")]
+    public SOPlayerSetup soPlayerSetup;
+
     public Rigidbody2D myRigdbody;
-    public Vector2 friction = new Vector2(.1f, 0);
-    public float speed;
-    public float speedRun;
-    public float forceJump;
-
-    [Header("Animations")]
-    /*public float jumpScaleY;
-    public float jumpScaleX;
-    public float animationDuration;*/
-    public SOFloat soJumpScaleY;
-    public SOFloat soJumpScaleX;
-    public SOFloat soAnimationDuration;
-
-    [Header("Animations States")]
     public Animator animator;
-    public string boolRun;
-
-    public string boolJump;
+    public Vector2 friction = new Vector2(.1f, 0);
 
     private float _currentSpeed;
-    private Ease ease = Ease.OutBack;
 
     void Update()
     {
@@ -39,28 +23,28 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            _currentSpeed = speedRun;
+            _currentSpeed = soPlayerSetup.speedRun;
         }
         else
         {
-            _currentSpeed = speed;
+            _currentSpeed = soPlayerSetup.speed;
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
             myRigdbody.velocity = new Vector2(+_currentSpeed, myRigdbody.velocity.y);
             myRigdbody.transform.localScale = new Vector2(1, 1);
-            animator.SetBool(boolRun, true);
+            animator.SetBool(soPlayerSetup.boolRun, true);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             myRigdbody.velocity = new Vector2(-_currentSpeed, myRigdbody.velocity.y);
             myRigdbody.transform.localScale = new Vector2(-1, 1);
-            animator.SetBool(boolRun, true);
+            animator.SetBool(soPlayerSetup.boolRun, true);
         }
         else
         {
-            animator.SetBool(boolRun, false);
+            animator.SetBool(soPlayerSetup.boolRun, false);
         }
 
         if(myRigdbody.velocity.x > 0)
@@ -77,24 +61,24 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            myRigdbody.velocity = Vector2.up * forceJump;
+            myRigdbody.velocity = Vector2.up * soPlayerSetup.forceJump;
             myRigdbody.transform.localScale = Vector2.one;
 
             DOTween.Kill(myRigdbody.transform);
 
-            animator.SetBool(boolJump, true);
+            animator.SetBool(soPlayerSetup.boolJump, true);
 
             jumpScale();
         }
         else
         {
-            animator.SetBool(boolJump, false);
+            animator.SetBool(soPlayerSetup.boolJump, false);
         }
     }
 
     public void jumpScale()
     {
-        myRigdbody.transform.DOScaleY(soJumpScaleY.value, soAnimationDuration.value).SetLoops(2, LoopType.Yoyo).SetEase(ease);
-        myRigdbody.transform.DOScaleX(soJumpScaleX.value, soAnimationDuration.value).SetLoops(2, LoopType.Yoyo).SetEase(ease);
+        myRigdbody.transform.DOScaleY(soPlayerSetup.jumpScaleY, soPlayerSetup.animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(soPlayerSetup.ease);
+        myRigdbody.transform.DOScaleX(soPlayerSetup.jumpScaleX, soPlayerSetup.animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(soPlayerSetup.ease);
     }
 }

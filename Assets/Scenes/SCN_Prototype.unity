@@ -1756,17 +1756,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e11a334b6e4684b83d38f1c8b3523f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soPlayerSetup: {fileID: 11400000, guid: 849add097c4ed1440b41d1641c5d0d26, type: 2}
   myRigdbody: {fileID: 942303946}
-  friction: {x: -1, y: 0}
-  speed: 10
-  speedRun: 15
-  forceJump: 16
-  soJumpScaleY: {fileID: 11400000, guid: 37e5ae69c81cd4b4597abfd9548b4c37, type: 2}
-  soJumpScaleX: {fileID: 11400000, guid: e240654e59a76db4693b748d49ab7b83, type: 2}
-  soAnimationDuration: {fileID: 11400000, guid: 54382c319325541488cb4e921276eec3, type: 2}
   animator: {fileID: 9259449}
-  boolRun: Run
-  boolJump: Jump
+  friction: {x: -1, y: 0}
 --- !u!210 &565143131
 SortingGroup:
   m_ObjectHideFlags: 0
