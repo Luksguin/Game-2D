@@ -6,9 +6,9 @@ using DG.Tweening;
 public class Player : MonoBehaviour
 {
     public SOPlayerSetup soPlayerSetup;
-
     public Rigidbody2D myRigdbody;
     public Animator animator;
+    public ParticleSystem systemParticle;
     public Vector2 friction = new Vector2(.1f, 0);
 
     private float _currentSpeed;
@@ -35,12 +35,22 @@ public class Player : MonoBehaviour
             myRigdbody.velocity = new Vector2(+_currentSpeed, myRigdbody.velocity.y);
             myRigdbody.transform.localScale = new Vector2(1, 1);
             animator.SetBool(soPlayerSetup.boolRun, true);
+            if (systemParticle != null)
+            {
+                systemParticle.transform.localScale = new Vector2(1, 1);
+                systemParticle.Play();
+            }
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             myRigdbody.velocity = new Vector2(-_currentSpeed, myRigdbody.velocity.y);
             myRigdbody.transform.localScale = new Vector2(-1, 1);
             animator.SetBool(soPlayerSetup.boolRun, true);
+            if (systemParticle != null)
+            {
+                systemParticle.transform.localScale = new Vector2(-1, 1);
+                systemParticle.Play();
+            }
         }
         else
         {

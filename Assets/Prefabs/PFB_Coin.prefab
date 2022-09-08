@@ -48,7 +48,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  systemParticle: {fileID: 0}
   animator: {fileID: 3673687384973714377}
   setTrigger: Collect
   destroyTime: 0.5
@@ -186,15 +185,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7916578522971685430, guid: a25216c8fb24e1e45b96b3f6214ba861, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7916578522971685430, guid: a25216c8fb24e1e45b96b3f6214ba861, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7916578522971685430, guid: a25216c8fb24e1e45b96b3f6214ba861, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7916578522971685430, guid: a25216c8fb24e1e45b96b3f6214ba861, type: 3}
       propertyPath: m_LocalRotation.w

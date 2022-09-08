@@ -5,12 +5,17 @@ using UnityEngine;
 public class CollectableBase : MonoBehaviour
 {
     public string playerTag;
+    public ParticleSystem systemParticle;
 
     [Header("Animations")]
     public Animator animator;
     public string setTrigger;
-
     public float destroyTime;
+
+    private void Awake()
+    {
+        if(systemParticle != null) systemParticle.transform.SetParent(null);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,6 +27,7 @@ public class CollectableBase : MonoBehaviour
 
     protected virtual void Collect()
     {
+        if (systemParticle != null) systemParticle.Play();
         OnCollect();
         animator.SetTrigger(setTrigger);
         Destroy(gameObject, destroyTime);
