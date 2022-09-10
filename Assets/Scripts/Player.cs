@@ -11,12 +11,32 @@ public class Player : MonoBehaviour
     public ParticleSystem systemParticle;
     public Vector2 friction = new Vector2(.1f, 0);
 
+    [Header("Collider Jump Setup")]
+    public Collider2D myCollider;
+    public float distToGround;
+    public float spaceToGround;
+
     private float _currentSpeed;
+
+    private void Awake()
+    {
+        if (myCollider != null)
+        {
+            distToGround = myCollider.bounds.extents.y;
+        }
+    }
 
     void Update()
     {
+        isGrounded();
         Jump();
         Moviments();
+    }
+
+    private bool isGrounded()
+    {
+        Debug.DrawRay(transform.position, -Vector2.up, Color.magenta, distToGround + spaceToGround);
+        return Physics2D.Raycast(transform.position, -Vector2.up, distToGround + spaceToGround);
     }
 
     public void Moviments()
@@ -35,6 +55,7 @@ public class Player : MonoBehaviour
             myRigdbody.velocity = new Vector2(+_currentSpeed, myRigdbody.velocity.y);
             myRigdbody.transform.localScale = new Vector2(1, 1);
             animator.SetBool(soPlayerSetup.boolRun, true);
+
             if (systemParticle != null)
             {
                 systemParticle.transform.localScale = new Vector2(1, 1);
@@ -46,6 +67,7 @@ public class Player : MonoBehaviour
             myRigdbody.velocity = new Vector2(-_currentSpeed, myRigdbody.velocity.y);
             myRigdbody.transform.localScale = new Vector2(-1, 1);
             animator.SetBool(soPlayerSetup.boolRun, true);
+
             if (systemParticle != null)
             {
                 systemParticle.transform.localScale = new Vector2(-1, 1);
@@ -69,7 +91,7 @@ public class Player : MonoBehaviour
 
     public void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
         {
             myRigdbody.velocity = Vector2.up * soPlayerSetup.forceJump;
             myRigdbody.transform.localScale = Vector2.one;
