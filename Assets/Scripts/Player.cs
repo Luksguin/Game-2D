@@ -35,8 +35,8 @@ public class Player : MonoBehaviour
 
     private bool isGrounded()
     {
-        Debug.DrawRay(transform.position, -Vector2.up, Color.magenta, distToGround + spaceToGround);
-        return Physics2D.Raycast(transform.position, -Vector2.up, distToGround + spaceToGround);
+        Debug.DrawRay(transform.position + Vector3.up * .1f, -Vector2.up, Color.magenta, distToGround + spaceToGround);
+        return Physics2D.Raycast(transform.position + Vector3.up * .1f, -Vector2.up, distToGround + spaceToGround);
     }
 
     public void Moviments()

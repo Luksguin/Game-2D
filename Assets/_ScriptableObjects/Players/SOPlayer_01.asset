@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 14
   speedRun: 17
-  forceJump: 20
+  forceJump: 25
   jumpScaleY: 1.3
   jumpScaleX: 0.8
   animationDuration: 0.2
