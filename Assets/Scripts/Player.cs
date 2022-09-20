@@ -8,7 +8,8 @@ public class Player : MonoBehaviour
     public SOPlayerSetup soPlayerSetup;
     public Rigidbody2D myRigdbody;
     public Animator animator;
-    public ParticleSystem systemParticle;
+    public ParticleSystem systemParticleDust;
+    public ParticleSystem systemParticleJump;
     public Vector2 friction = new Vector2(.1f, 0);
 
     [Header("Collider Jump Setup")]
@@ -56,10 +57,10 @@ public class Player : MonoBehaviour
             myRigdbody.transform.localScale = new Vector2(1, 1);
             animator.SetBool(soPlayerSetup.boolRun, true);
 
-            if (systemParticle != null)
+            if (systemParticleDust != null)
             {
-                systemParticle.transform.localScale = new Vector2(1, 1);
-                systemParticle.Play();
+                systemParticleDust.transform.localScale = new Vector2(1, 1);
+                systemParticleDust.Play();
             }
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
@@ -68,10 +69,10 @@ public class Player : MonoBehaviour
             myRigdbody.transform.localScale = new Vector2(-1, 1);
             animator.SetBool(soPlayerSetup.boolRun, true);
 
-            if (systemParticle != null)
+            if (systemParticleDust != null)
             {
-                systemParticle.transform.localScale = new Vector2(-1, 1);
-                systemParticle.Play();
+                systemParticleDust.transform.localScale = new Vector2(-1, 1);
+                systemParticleDust.Play();
             }
         }
         else
@@ -101,6 +102,8 @@ public class Player : MonoBehaviour
             animator.SetBool(soPlayerSetup.boolJump, true);
 
             jumpScale();
+
+            systemParticleJump.Play();
         }
         else
         {
