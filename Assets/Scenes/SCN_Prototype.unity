@@ -851,6 +851,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!198 &328986123 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7196718384886988561, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
+  m_PrefabInstance: {fileID: 2013052702}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &379603621
 GameObject:
   m_ObjectHideFlags: 0
@@ -2609,6 +2614,11 @@ MonoBehaviour:
 Animator:
   m_CorrespondingSourceObject: {fileID: 2403329696302037006, guid: 3de838754c767a446a5473969062a84e, type: 3}
   m_PrefabInstance: {fileID: 2063969401}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &851226386 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 515991694457657570, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
+  m_PrefabInstance: {fileID: 2013052702}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &912334841
 GameObject:
@@ -4613,6 +4623,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7414938528401667743, guid: 164b3856b6d938a41925bbeee41d58ac, type: 3}
   m_PrefabInstance: {fileID: 1777486694}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &1820642721 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 22457432071630300, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
+  m_PrefabInstance: {fileID: 2013052702}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1820808572
 GameObject:
   m_ObjectHideFlags: 0
@@ -5435,6 +5450,10 @@ PrefabInstance:
       value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 515991694457657570, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 515991694457657570, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
       propertyPath: ColorModule.enabled
       value: 1
       objectReference: {fileID: 0}
@@ -5548,20 +5567,44 @@ PrefabInstance:
       objectReference: {fileID: 2134578769}
     - target: {fileID: 2767203035148673091, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.04
+      value: -0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2767203035148673091, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796860218282477488, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 6661485163583161520, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
       propertyPath: myCollider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1820642721}
     - target: {fileID: 6661485163583161520, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
       propertyPath: distToGround
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6661485163583161520, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
+      propertyPath: systemParticleDust
+      value: 
+      objectReference: {fileID: 851226386}
+    - target: {fileID: 6661485163583161520, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
+      propertyPath: systemParticleJump
+      value: 
+      objectReference: {fileID: 328986123}
     - target: {fileID: 6753641708331607428, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
       propertyPath: myRigdbody
       value: 
       objectReference: {fileID: 942303946}
+    - target: {fileID: 7196718384886988561, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7196718384886988561, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8007466312498025151, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
       propertyPath: m_RootOrder
       value: 0

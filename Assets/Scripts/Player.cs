@@ -103,7 +103,7 @@ public class Player : MonoBehaviour
 
             jumpScale();
 
-            systemParticleJump.Play();
+            if (systemParticleJump != null) systemParticleJump.Play();
         }
         else
         {
