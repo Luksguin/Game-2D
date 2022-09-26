@@ -12,6 +12,9 @@ public class CollectableBase : MonoBehaviour
     public string setTrigger;
     public float destroyTime;
 
+    [Header("Sounds")]
+    public AudioSource audioClip;
+
     private void Awake()
     {
         if(systemParticle != null) systemParticle.transform.SetParent(null);
@@ -27,7 +30,6 @@ public class CollectableBase : MonoBehaviour
 
     protected virtual void Collect()
     {
-        if (systemParticle != null) systemParticle.Play();
         OnCollect();
         animator.SetTrigger(setTrigger);
         Destroy(gameObject, destroyTime);
@@ -35,6 +37,7 @@ public class CollectableBase : MonoBehaviour
 
     protected virtual void OnCollect()
     {
-
+        if (systemParticle != null) systemParticle.Play();
+        if (audioClip != null) audioClip.Play();
     }
 }

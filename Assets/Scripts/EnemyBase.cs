@@ -9,6 +9,8 @@ public class EnemyBase : MonoBehaviour
 
     public Animator animator;
 
+    public AudioSource audioClip;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         var life = collision.gameObject.GetComponent<LifeBase>();
@@ -23,6 +25,12 @@ public class EnemyBase : MonoBehaviour
     public void Attack()
     {
         animator.SetTrigger(soEnemySetup.triggerAttack);
+        PlayAudio();
+    }
+
+    public void PlayAudio()
+    {
+        if (audioClip != null) audioClip.Play();
     }
 
     public void Damage(int amount)
