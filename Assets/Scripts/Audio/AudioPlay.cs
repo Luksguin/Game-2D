@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class AudioPlay : MonoBehaviour
 {
-    public KeyCode buttonPlayAudio;
     public AudioSource clip;
-    void Update()
+
+    public void Play()
     {
-        if (Input.GetKeyDown(buttonPlayAudio))
-        {
-            clip.Play();
-        }
+        clip.Play();
     }
 }
