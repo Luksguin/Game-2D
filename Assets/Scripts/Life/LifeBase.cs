@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class LifeBase : MonoBehaviour
 {
-    public int startLife;
-    private int _currentLife;
-
-    private bool _isDead = false;
-
     public FlashPlayer flashPlayer;
+    public AudioSource audioClip;
+    public int startLife;
+
+    private int _currentLife;
+    private bool _isDead = false;
 
     [Header("Animation Death")]
     public Animator animator;
@@ -19,7 +19,7 @@ public class LifeBase : MonoBehaviour
     private void Awake()
     {
         Init();
-        if(flashPlayer == null)
+        if (flashPlayer == null)
         {
             flashPlayer = GetComponent<FlashPlayer>();
         }
@@ -32,16 +32,21 @@ public class LifeBase : MonoBehaviour
 
     public void Damage(int damage)
     {
-        if(_isDead) return;
+        if (_isDead) return;
 
         _currentLife -= damage;
 
-        if(_currentLife <= 0)
+        if(audioClip != null)
+        {
+            PlayAudioDamage();
+        }
+
+        if (_currentLife <= 0)
         {
             Kill();
         }
 
-        if(flashPlayer != null)
+        if (flashPlayer != null)
         {
             flashPlayer.Flash();
         }
@@ -54,5 +59,10 @@ public class LifeBase : MonoBehaviour
         animator.SetBool(boolDeath, true);
 
         Destroy(gameObject, deathTime);
+    }
+
+    public void PlayAudioDamage()
+    {
+        if (audioClip != null) audioClip.Play();
     }
 }

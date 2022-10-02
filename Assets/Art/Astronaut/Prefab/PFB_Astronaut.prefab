@@ -407,6 +407,7 @@ MonoBehaviour:
   positionShoot: {fileID: 7480790381374919863}
   playerSide: {fileID: 8007466312498025151}
   timeShoot: 1
+  audioClip: {fileID: 0}
 --- !u!1 &4638734327190524125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,8 +1038,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446ee2ea414508141ab7d1763a3ba2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLife: 10
   flashPlayer: {fileID: 0}
+  audioClip: {fileID: 0}
+  startLife: 10
   animator: {fileID: 6413013834153556191}
   boolDeath: Death
   deathTime: 2.5

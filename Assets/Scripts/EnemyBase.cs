@@ -25,10 +25,10 @@ public class EnemyBase : MonoBehaviour
     public void Attack()
     {
         animator.SetTrigger(soEnemySetup.triggerAttack);
-        PlayAudio();
+        PlayAudioEnemy();
     }
 
-    public void PlayAudio()
+    public void PlayAudioEnemy()
     {
         if (audioClip != null) audioClip.Play();
     }

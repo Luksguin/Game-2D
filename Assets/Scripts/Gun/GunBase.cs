@@ -8,6 +8,7 @@ public class GunBase : MonoBehaviour
     public Transform positionShoot;
     public Transform playerSide;
     public float timeShoot;
+    public AudioSource audioClip;
 
     private Coroutine _currentCoroutine;
 
@@ -29,11 +30,17 @@ public class GunBase : MonoBehaviour
         while(true)
         {
             Shoot();
+            PlayAudioShoot();
             yield return new WaitForSeconds(timeShoot);
         }
     }
 
-    public void Shoot()
+    public void PlayAudioShoot()
+    {
+        if (audioClip != null) audioClip.Play();
+    }
+
+        public void Shoot()
     {
         var projectille = Instantiate(projectillePrefab);
         projectille.side = playerSide.transform.localScale.x;
