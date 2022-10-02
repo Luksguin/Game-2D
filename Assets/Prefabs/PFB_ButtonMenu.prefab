@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 6676500763052069220}
   - component: {fileID: 2436599708786295181}
   - component: {fileID: 7480765394676294930}
+  - component: {fileID: 8574972048558738631}
   m_Layer: 0
   m_Name: PFB_ButtonMenu
   m_TagString: Untagged
@@ -255,3 +256,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8574972048558738631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010085527359963314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0a1474b643c8648b072da4d5200be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
