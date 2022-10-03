@@ -335,7 +335,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 7475299985159222176}
   m_Bounds:
-    m_Center: {x: -0.23433685, y: 0.01914215, z: 0}
+    m_Center: {x: -0.23433113, y: 0.01914215, z: 0}
     m_Extent: {x: 0.25723973, y: 0.4174857, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -480,9 +480,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446ee2ea414508141ab7d1763a3ba2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashPlayer: {fileID: 0}
-  audioClip: {fileID: 0}
   startLife: 0
+  flashPlayer: {fileID: 0}
+  audioClipDamage: {fileID: 0}
+  audioClipKill: {fileID: 0}
+  uiLoseGame: {fileID: 0}
   animator: {fileID: 0}
   boolDeath: 
   deathTime: 0
@@ -506,7 +508,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!1 &3257322378915922041
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +640,7 @@ MonoBehaviour:
   - {fileID: 3766772923177649577}
   - {fileID: 176777962350426656}
   m_Bounds:
-    m_Center: {x: -0.048374653, y: 0.008623123, z: 0}
+    m_Center: {x: -0.048372984, y: 0.008623123, z: 0}
     m_Extent: {x: 2.9191384, y: 3.3575892, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -741,7 +743,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 907292751167566779}
   m_Bounds:
-    m_Center: {x: -0.23896027, y: -0.06505871, z: 0}
+    m_Center: {x: -0.23896599, y: -0.06505871, z: 0}
     m_Extent: {x: 0.23255783, y: 0.42108253, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1037,7 +1039,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 6350850424991882273}
   m_Bounds:
-    m_Center: {x: -0.26991653, y: -0.056985855, z: 0}
+    m_Center: {x: -0.26991463, y: -0.056985855, z: 0}
     m_Extent: {x: 0.33184385, y: 0.41667992, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1170,7 +1172,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 300597555843645670}
   m_Bounds:
-    m_Center: {x: -0.18097687, y: -0.021264076, z: 0}
+    m_Center: {x: -0.18097496, y: -0.021264076, z: 0}
     m_Extent: {x: 0.9259789, y: 0.6290526, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1

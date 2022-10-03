@@ -420,7 +420,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4483420648904792363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,9 +449,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446ee2ea414508141ab7d1763a3ba2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashPlayer: {fileID: 0}
-  audioClip: {fileID: 0}
   startLife: 3
+  flashPlayer: {fileID: 0}
+  audioClipDamage: {fileID: 0}
+  audioClipKill: {fileID: 0}
+  uiLoseGame: {fileID: 0}
   animator: {fileID: 2403329696302037006}
   boolDeath: Death
   deathTime: 1.5
